@@ -17,12 +17,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //quando precisarmos utilizar esses recursos na aplicação
-<<<<<<< HEAD
 const auth = firebase.auth();
 const database = firebase.database();
 
 export { firebase, auth, database }
-=======
-export const auth = firebase.auth();
-export const database = firebase.database();
->>>>>>> d6c68b0ed5498c23a2420c1ec6c31a855201f8e9
