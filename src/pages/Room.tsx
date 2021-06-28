@@ -50,7 +50,7 @@ export function Room() {
     useEffect(() => {
         const roomRef = database.ref(`rooms/${roomId}`);
 
-        roomRef.once('value', room => {
+        roomRef.on('value', room => {
             const databaseRoom = room.val();
             const firebaseQuestions: FirebaseQuestions = databaseRoom.questions ?? {};
 
@@ -113,7 +113,7 @@ export function Room() {
                 <form onSubmit={handleSendQuestion}>
                     <textarea
                         placeholder="O que você quer perguntar?"
-                        onChange={event => setNewQuestion(event.target.value)}
+                        onChange={event => setNewQuestion(event.target.value)}  
                         value={newQuestion}
                     />
                     <div className="form-footer">
